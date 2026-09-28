@@ -1,0 +1,22 @@
+{
+  "name": "gitguard",
+  "version": "0.1.0",
+  "description": "Auto-pull, auto-commit and push for your local git projects",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "node test.js",
+    "dist": "electron-builder --win --linux"
+  },
+  "build": {
+    "appId": "dev.gitguard.app",
+    "files": ["main.js", "src/**", "ui/**"],
+    "win": { "target": "nsis" },
+    "linux": { "target": "AppImage", "category": "Development" }
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}
